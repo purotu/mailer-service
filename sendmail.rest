@@ -1,0 +1,11 @@
+POST https://dev.esedu.fi/mailer/api/ HTTP/1.1
+content-type: application/json
+
+{
+  "toEmail": "tuomas.puro@gmail.com",
+  "toName": "Tumppi",
+  "fromEmail": "tuomas.puro@esedu.fi",
+  "fromName": "Tuomas Puro",
+  "subject": "This is the subject of the message!",
+  "messageBody": "<h1>Hello dudes</h1><p>This is the great message</p>"
+}
