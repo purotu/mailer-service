@@ -3,9 +3,9 @@ content-type: application/json
 
 {
   "toEmail": "tuomas.puro@gmail.com",
-  "toName": "Tumppi",
+  "toName": "Tuomas Puro",
   "fromEmail": "tuomas.puro@esedu.fi",
-  "fromName": "Tuomas Puro",
+  "fromName": "Tumppi",
   "subject": "This is the subject of the message!",
   "messageBody": "<h1>Hello dudes</h1><p>This is the great message</p>"
 }

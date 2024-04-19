@@ -18,7 +18,8 @@ function sendResponse($data) {
 
 // Check if JSON decoding was successful
 if (json_last_error() !== JSON_ERROR_NONE) {
-  sendResponse(['error' => 'Invalid JSON payload']);
+  sendResponse(json_last_error);
+  // sendResponse(['error' => 'Invalid JSON payload']);
 }
 
 // Check if all required properties are present
@@ -34,7 +35,7 @@ if (!filter_var($json->fromEmail, FILTER_VALIDATE_EMAIL) || !filter_var($json->t
 
 require_once realpath(__DIR__ . '/../vendor/autoload.php');
 // Looing for .env at the root directory
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../..');
 $dotenv->load();
 
 // Retrive env variable
